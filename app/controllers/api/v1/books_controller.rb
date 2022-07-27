@@ -21,7 +21,7 @@ module Api
     # POST /books
     def create
       @books = Book.new(book_params)
-      # byebug
+      byebug
       if @books.save
         
         render json: @books , status: :created, location: @books
